@@ -1,0 +1,62 @@
+/*Preferência de movimento*/
+.motion{
+    width: 250px;
+    height: 250px;
+    background-color: black;
+    border-radius: 100%;
+    position: relative;
+    left: 0;
+    animation: circle-move 1.5s infinite;
+}
+
+@keyframes circle-move{
+   100%{
+        left: 50%;
+    }
+    50%{
+        left: 25%;
+    }
+    0%{
+        left: 0%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce){
+    .motion{
+        animation: none;
+    }
+}
+
+/*Preferência de contraste*/
+.contraste p{
+    font-size: 1.5rem;
+    color: red;
+}
+
+@media (prefers-contrast:more){
+    .contraste p{
+        font-size: 1.5rem;
+        color: black;
+        font-weight: bold;
+    }
+}
+
+/*Preferência de contraste - schema*/
+.schema{
+    width: 70%;
+    padding: 3rem;
+    margin: 0 auto;
+    text-align: center;
+    background-color: white;
+    color: black;
+}
+@media(prefers-color-scheme: dark){
+    .schema{
+        width: 70%;
+        padding: 3rem;
+        margin: 0 auto;
+        text-align: center;
+        background-color: black;
+        color: white;
+    }
+}
